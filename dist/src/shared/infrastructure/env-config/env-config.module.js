@@ -16,14 +16,14 @@ let EnvConfigModule = exports.EnvConfigModule = class EnvConfigModule extends co
         return super.forRoot({
             ...options,
             envFilePath: [
-                (0, node_path_1.join)(__dirname, `../../../../.env.${process.env.NODE_ENV}`)
-            ]
+                (0, node_path_1.join)(__dirname, `../../../../.env.${process.env.NODE_ENV}`),
+            ],
         });
     }
 };
 exports.EnvConfigModule = EnvConfigModule = __decorate([
     (0, common_1.Module)({
-        providers: [env_config_service_1.EnvConfigService],
+        providers: [env_config_service_1.EnvConfigService, config_1.ConfigService],
     })
 ], EnvConfigModule);
 //# sourceMappingURL=env-config.module.js.map
