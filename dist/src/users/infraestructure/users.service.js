@@ -6,19 +6,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.UsersService = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const env_config_module_1 = require("./shared/infrastructure/env-config/env-config.module");
-const users_module_1 = require("./users/infraestructure/users.module");
-let AppModule = exports.AppModule = class AppModule {
+let UsersService = exports.UsersService = class UsersService {
+    create(createUserDto) {
+        return 'This action adds a new user';
+    }
+    findAll() {
+        return `This action returns all users`;
+    }
+    findOne(id) {
+        return `This action returns a #${id} user`;
+    }
+    update(id, updateUserDto) {
+        return `This action updates a #${id} user`;
+    }
+    remove(id) {
+        return `This action removes a #${id} user`;
+    }
 };
-exports.AppModule = AppModule = __decorate([
-    (0, common_1.Module)({
-        imports: [env_config_module_1.EnvConfigModule, users_module_1.UsersModule],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
-    })
-], AppModule);
-//# sourceMappingURL=app.module.js.map
+exports.UsersService = UsersService = __decorate([
+    (0, common_1.Injectable)()
+], UsersService);
+//# sourceMappingURL=users.service.js.map
